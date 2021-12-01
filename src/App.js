@@ -9,6 +9,7 @@ import Footer from './components/Footer/Footer';
 
 import axios from 'axios';
 import './App.css'
+import Favorites from './components/Favorites/Favorites';
 
 const App = () => {
 
@@ -31,6 +32,8 @@ const App = () => {
   const [country, setCountry] = useState('sv_US')
   const [sortType, setSortType] = useState(null)
   const [search, setSearch] = useState('')
+  const [favorites, setFavorites] = useState([])
+
   useEffect(() => {
 
     axios('https://accounts.spotify.com/api/token', {
@@ -117,79 +120,107 @@ const App = () => {
     setCountry(country)
   }
 
-  return (
-    <div className='container-fluid'>
+  const updateFavorites = (obj, isDelete) => {
 
+    if (favorites.length > 0)
+      !isDelete ? setFavorites([...favorites, obj]) : setFavorites(obj)
+    else
+      setFavorites([obj])
+
+  }
+
+  return (
+    <>
       <Nav
         country={country}
         changeCounrty={changeCounrty}
       />
+      <div className='container-fluid'>
+        <Favorites
+          favorites={favorites}
+          updateFavorites={updateFavorites}
+          setFavorites={setFavorites}
+        />
 
-      <div className="container">
-        <h1 className='text-left'>Playlists of {country === 'IL' ? 'ISRAEL' : 'USA'}</h1>
+        <div className="container">
+          <h1 className='text-left'>Playlists of {country === 'IL' ? 'ISRAEL' : 'USA'}</h1>
 
-        <form onSubmit={buttonClicked}>
+          <form onSubmit={buttonClicked}>
 
-          <Dropdown
-            label="Genre:"
-            options={genres.listOfGenresFromAPI}
-            selectedValue={genres.selectedGenre}
-            changed={genreChanged}
-          />
+            <Dropdown
+              label="Genre:"
+              options={genres.listOfGenresFromAPI}
+              selectedValue={genres.selectedGenre}
+              changed={genreChanged}
+            />
 
-          <Dropdown
-            label="Playlist:"
-            options={playlist.listOfPlaylistFromAPI}
-            selectedValue={playlist.selectedPlaylist}
-            changed={playlistChanged}
-            setCount={setCount}
-            setDisabled={setDisabled}
-          />
+            <Dropdown
+              label="Playlist:"
+              options={playlist.listOfPlaylistFromAPI}
+              selectedValue={playlist.selectedPlaylist}
+              changed={playlistChanged}
+              setCount={setCount}
+              setDisabled={setDisabled}
+            />
 
-          <div className="col-sm-6 row form-group px-0">
-            <button type='submit' disabled={disabled} className="btn btn-success col-sm-12">
-              Search
-            </button>
-          </div>
-          {/* {console.log(tracks.listOfTracksFromAPI)} */}
+            <div className="col-sm-6 row form-group px-0">
+              <button type='submit' disabled={disabled} className="btn btn-success col-sm-6"
+                style={{ margin: 'auto', borderRadius: '5px' }}>
+                Search
+              </button>
+            </div>
+            {/* {console.log(tracks.listOfTracksFromAPI)} */}
 
-          <div className="row">
-            <Listbox
-              // items={tracks.listOfTracksFromAPI.sort((a, b) => a.track.popularity - b.track.popularity)}
-              sortType={sortType}
-              setSortType={setSortType}
-              search={search}
-              setSearch={setSearch}
-              disabled={disabled}
-              items={tracks.listOfTracksFromAPI
-                .filter(res => {
-                  if (search === '')
-                    return res;
-                  else if (
-                    res.track.name.toLowerCase().includes(search.toLowerCase())
-                  )
-                    return res;
-                })
-                .sort((a, b) => {
-                  return sortType === 'PopularFirst' ?
-                    a.track.popularity - b.track.popularity
-                    : sortType !== null && new Date(a.track.added_at) - new Date(b.track.added_at)
-                })
+            <div className="row">
+              {
+
+                tracks.listOfTracksFromAPI.length > 0 &&
+
+                <Listbox
+                  // items={tracks.listOfTracksFromAPI.sort((a, b) => a.track.popularity - b.track.popularity)}
+                  sortType={sortType}
+                  setSortType={setSortType}
+                  search={search}
+                  setSearch={setSearch}
+                  disabled={disabled}
+                  items={tracks.listOfTracksFromAPI
+                    .filter(res => {
+                      if (search === '')
+                        return res;
+                      else if (
+                        res.track.name.toLowerCase().includes(search.toLowerCase())
+                      )
+                        return res;
+
+                    })
+                    .sort((a, b) => {
+                      return sortType === 'PopularFirst' ?
+                        b.track.popularity - a.track.popularity
+                        : sortType !== null && new Date(a.track.added_at) - new Date(b.track.added_at)
+                    })
+                  }
+
+                  clicked={listboxClicked}
+                  setCount={setCount}
+                  playlistChanged={playlistChanged}
+                  selectedPlaylist={playlist.selectedPlaylist}
+                />
               }
 
-              clicked={listboxClicked}
-              setCount={setCount}
-              playlistChanged={playlistChanged}
-              selectedPlaylist={playlist.selectedPlaylist}
-            />
-            {trackDetail && <Detail {...trackDetail} />}
-          </div>
+              {trackDetail &&
+                <Detail
+                  favorites={favorites}
+                  setFavorites={setFavorites}
+                  updateFavorites={updateFavorites}
+                  {...trackDetail} />}
+            </div>
 
-        </form>
+          </form>
+
+        </div>
       </div>
       <Footer />
-    </div>
-
+    </>
   );
 }
 

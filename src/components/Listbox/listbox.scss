@@ -1,10 +1,49 @@
 .list-group {
   // overflow: scroll;
-  height: 400px;
+  max-height: 400px;
   overflow-x: hidden !important; /* Hide horizontal scrollbar */
   margin-bottom: 50px;
 
-  .sortAndSerachDiv {
+  .btn-info {
+    background: #00e25b !important;
+  }
+  .sortAndSearchDiv {
+    margin: 0 auto;
+    position: sticky;
+    top: -5px;
+    background: inherit;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.3);
+    width: 100%;
+  }
+  .rowOfSong {
     background: white;
+  }
+  input[type="search"],
+  .sortDiv {
+    // margin: 0 5px 0 5px;
+    text-align: center;
+    background: inherit;
+    border: 2px solid white;
+    border-radius: 5px;
+    color: #495057;
+    background: rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+  }
+  .sortDiv span {
+    font-size: x-small;
+  }
+
+  input[type="search"]:disabled {
+    cursor: not-allowed !important;
+  }
+  .disabled,
+  :disabled {
+    pointer-events: initial !important;
+  }
+  .popularSongIcon {
+    position: absolute;
+    right: 20px;
+    z-index: 3;
   }
 }

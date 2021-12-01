@@ -1,0 +1,125 @@
+.favorites {
+  position: fixed;
+  width: 300px;
+  right: 0;
+  top: 60px;
+}
+
+.favorites .favoritesContainer {
+  background: rgba(0, 0, 0, 0.1);
+  height: 100vh;
+  border-left: 1px solid;
+  z-index: 2;
+}
+
+.favorites .customFadeIn {
+  -webkit-animation: fadeInRight 1s;
+  /* Safari, Chrome and Opera > 12.1 */
+}
+
+@-webkit-keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(200px);
+    transform: translateX(200px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(200px);
+    transform: translateX(200px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+.favorites .favoritesIcon {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.favorites i.far.fa-trash-alt {
+  margin: auto;
+}
+
+.favorites .songName {
+  font-style: italic;
+  left: 10px;
+  font-size: x-large;
+}
+
+.favorites .songName:hover,
+.favorites i.far.fa-trash-alt:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.favorites .deleteAllIcon {
+  position: absolute;
+  left: 0px;
+  top: 10px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.favorites .saveAllIcon {
+  position: absolute;
+  left: 30px;
+  top: 10px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.favorites .songRow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-right: 15px;
+  margin-left: 15px;
+  text-align: center;
+}
+
+.favorites .songRow h3 {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+.favorites .songRow i {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.favorites hr {
+  border-top: 1px solid white;
+  width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  .favorites {
+    top: 40px;
+    z-index: 2 !important;
+  }
+  .favorites .favoritesContainer {
+    background: black;
+  }
+}
+/*# sourceMappingURL=favorites.css.map */

@@ -28,3 +28,8 @@ label {
 img.track {
   border: 1px solid #8a8a8a;
 }
+.btn-success.disabled,
+.btn-success:disabled {
+  cursor: not-allowed !important;
+  pointer-events: initial !important;
+}

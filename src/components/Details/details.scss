@@ -33,17 +33,25 @@
     position: absolute;
     bottom: 0;
     border-radius: 0 0 10px 10px;
-    background: #00000052;
+    // background: #00000052;
+    background: #0000008f;
     width: 100%;
     text-align: center;
   }
   .contentOfSong:hover {
-    background: #0000008f;
+    background: #000000b6;
   }
   .contentOfSong div {
     margin: 0 !important;
   }
   .contentOfSong h2 {
     font-size: x-large;
+    font-weight: bold;
+  }
+  i {
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+    cursor: pointer;
   }
 }
