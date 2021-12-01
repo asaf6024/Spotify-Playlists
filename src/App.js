@@ -6,14 +6,12 @@ import Listbox from './components/Listbox/Listbox';
 import Detail from './components/Details/Details';
 import Nav from './components/Nav/Nav';
 import Footer from './components/Footer/Footer';
-import { Credentials } from './Credentials';
 
 import axios from 'axios';
 import './App.css'
 
 const App = () => {
 
-  const spotify = Credentials();
 
   // console.log('RENDERING APP.JS');
 
@@ -59,7 +57,7 @@ const App = () => {
 
       });
 
-  }, [genres.selectedGenre, process.env.REACT_APP_CLIENT_ID, process.env.REACT_APP_CLIENT_SECRET, country]);
+  }, [genres.selectedGenre, country]);
 
   const genreChanged = (val) => {
     setGenres({
