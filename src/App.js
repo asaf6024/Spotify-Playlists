@@ -38,7 +38,7 @@ const App = () => {
     axios('https://accounts.spotify.com/api/token', {
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
-        'Authorization': 'Basic ' + btoa(spotify.ClientId + ':' + spotify.ClientSecret)
+        'Authorization': 'Basic ' + btoa(process.env.REACT_APP_CLIENT_ID + ':' + process.env.REACT_APP_CLIENT_SECRET)
       },
       data: 'grant_type=client_credentials',
       method: 'POST'
@@ -59,7 +59,7 @@ const App = () => {
 
       });
 
-  }, [genres.selectedGenre, spotify.ClientId, spotify.ClientSecret, country]);
+  }, [genres.selectedGenre, process.env.REACT_APP_CLIENT_ID, process.env.REACT_APP_CLIENT_SECRET, country]);
 
   const genreChanged = (val) => {
     setGenres({
