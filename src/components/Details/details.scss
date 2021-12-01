@@ -1,0 +1,49 @@
+.detailsContainer {
+  img {
+    margin: auto;
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  label,
+  h2 {
+    text-align: center;
+  }
+  .playButton {
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    position: absolute;
+    color: white;
+  }
+  .playButton:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    color: black;
+  }
+  a:hover {
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s;
+    color: #fff;
+  }
+  .contentOfSong {
+    position: absolute;
+    bottom: 0;
+    border-radius: 0 0 10px 10px;
+    background: #00000052;
+    width: 100%;
+    text-align: center;
+  }
+  .contentOfSong:hover {
+    background: #0000008f;
+  }
+  .contentOfSong div {
+    margin: 0 !important;
+  }
+  .contentOfSong h2 {
+    font-size: x-large;
+  }
+}

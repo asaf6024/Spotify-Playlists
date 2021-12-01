@@ -1,0 +1,10 @@
+.list-group {
+  // overflow: scroll;
+  height: 400px;
+  overflow-x: hidden !important; /* Hide horizontal scrollbar */
+  margin-bottom: 50px;
+
+  .sortAndSerachDiv {
+    background: white;
+  }
+}
