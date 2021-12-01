@@ -57,7 +57,7 @@ const NavPage = ({ country, changeCounrty }) => {
                         <option value='sv_US'>USA</option>
                         <option value='FR' >FRANCE</option>
                         <option value='IT' >ITALY</option>
-                        <option value='GBR' >GBR</option>
+                        <option value='GBR' >United Kingdom</option>
                         <option value='ES' >SPAIN</option>
                     </select>
                     {/* <hr className='mobileHr' /> */}
