@@ -33,14 +33,17 @@ const NavPage = ({ country, changeCounrty }) => {
         <Navbar variant="dark" style={{ background: bgDark }} expand="lg" className='col-sm-12' id='navBar'>
 
             <Navbar.Brand href="/" className='col-sm-12 col-lg-7 font-weight-bold titleOfNav'
-            >Spotify Playlists Globally
+            >
+                <img src={'./images/spotify.png'} width='30' height='30' />&nbsp;&nbsp;
+                Spotify Playlists Globally
+
             </Navbar.Brand>
 
             <Navbar.Toggle aria-controls="navbar-dark-example" />
 
 
-            <Navbar.Collapse id="navbar-dark-example" className='col-sm-12 col-lg-5 text-center'>
-                <Nav className='text-left row'>
+            <Navbar.Collapse id="navbar-dark-example" className='col-sm-12 col-lg-5 text-right'>
+                <Nav>
 
                     {/* <NavItem className='navItem'>
                         <button className={country === 'IL' ? 'countryButton activeButton btn-success' : 'countryButton'} onClick={e => changeCounrty(e, 'IL')}>🇮🇱</button>

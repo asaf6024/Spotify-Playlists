@@ -8,7 +8,7 @@
 
 .favorites .favoritesContainer {
   background: rgba(0, 0, 0, 0.1);
-  height: 80vh;
+  height: 90vh;
   border-left: 1px solid;
   z-index: 2;
   overflow: auto;
