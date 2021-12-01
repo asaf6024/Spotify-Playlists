@@ -29,7 +29,8 @@ const App = () => {
   const [trackDetail, setTrackDetail] = useState(null);
   const [count, setCount] = useState(10)
   const [disabled, setDisabled] = useState('disabled')
-  const [country, setCountry] = useState('sv_US')
+  const [country, setCountry] = useState('IL')
+  const [countryName, setCountryName] = useState('ISRAEL')
   const [sortType, setSortType] = useState(null)
   const [search, setSearch] = useState('')
   const [favorites, setFavorites] = useState([])
@@ -116,8 +117,12 @@ const App = () => {
   }
 
   const changeCounrty = (e, country) => {
+
+    let index = e.nativeEvent.target.selectedIndex;
+
     e.preventDefault()
     setCountry(country)
+    setCountryName(e.nativeEvent.target[index].text)
   }
 
   const updateFavorites = (obj, isDelete) => {
@@ -143,7 +148,7 @@ const App = () => {
         />
 
         <div className="container">
-          <h1 className='text-left'>Playlists of {country === 'IL' ? 'ISRAEL' : 'USA'}</h1>
+          <h1 className='text-left'>Popular Music in {countryName}</h1>
 
           <form onSubmit={buttonClicked}>
 

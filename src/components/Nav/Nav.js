@@ -33,18 +33,33 @@ const NavPage = ({ country, changeCounrty }) => {
         <Navbar variant="dark" style={{ background: bgDark }} expand="lg" className='col-sm-12' id='navBar'>
 
             <Navbar.Brand href="/" className='col-sm-12 col-lg-7 font-weight-bold titleOfNav'
-            >My Soptify App
+            >Spotify Playlists Globally
             </Navbar.Brand>
 
             <Navbar.Toggle aria-controls="navbar-dark-example" />
 
+
             <Navbar.Collapse id="navbar-dark-example" className='col-sm-12 col-lg-5 text-center'>
                 <Nav className='text-left row'>
 
-                    <NavItem className='navItem'>
+                    {/* <NavItem className='navItem'>
                         <button className={country === 'IL' ? 'countryButton activeButton btn-success' : 'countryButton'} onClick={e => changeCounrty(e, 'IL')}>🇮🇱</button>
                         <button className={country === 'sv_US' ? 'countryButton activeButton btn-success' : 'countryButton'} onClick={e => changeCounrty(e, 'sv_US')}>🇺🇸</button>
-                    </NavItem>
+                    </NavItem> */}
+                    <label className='col-sm-4 text-white'>Country</label>
+
+                    <select
+                        id='countrySelected'
+                        className='form-control col-sm-8'
+                        onChange={e => changeCounrty(e, e.target.value)}>
+                        <option value=''>Select Country...</option>
+                        <option selected={true}>ISRAEL</option>
+                        <option value='sv_US'>USA</option>
+                        <option value='FR' >FRANCE</option>
+                        <option value='IT' >ITALY</option>
+                        <option value='GBR' >GBR</option>
+                        <option value='ES' >SPAIN</option>
+                    </select>
                     {/* <hr className='mobileHr' /> */}
 
                 </Nav>

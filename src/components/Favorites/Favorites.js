@@ -81,17 +81,33 @@ function Favorites({ favorites, updateFavorites, setFavorites }) {
                     favorites.length > 0 ?
                         <>
                             {
-                                favorites.map(favorite => {
+                                favorites.map((favorite, i) => {
+                                    console.log(favorite)
                                     return <React.Fragment key={favorite.external_urls}>
                                         <div className='songRow animated fadeIn' style={{ marginTop: '30px' }}>
                                             <h3 className='songName text-white' onClick={() => window.open(favorite.external_urls)}
                                             >{favorite.name}</h3>
+
+
                                             <i className="text-white far fa-trash-alt"
                                                 title='Delete Song'
                                                 onClick={() => deleteFavoriteItem(favorite.name)}
                                             ></i>
                                         </div>
-                                        <hr />
+                                        <div className='artistsOfFavorite'>
+                                            {
+                                                favorite.artists.map((artist, index) => {
+                                                    return <React.Fragment key={artist.id}>
+                                                        <a href={artist.external_urls.spotify} target='_blank'
+                                                            rel="noopener noreferrer"
+                                                        > {artist.name}</a>
+
+                                                        {favorite.artists.length > 1 && index !== favorite.artists.length - 1 ? <span className='font-italic  text-white'>, </span> : ''}
+                                                    </React.Fragment>
+                                                })
+                                            }
+                                        </div>
+                                        {favorites.length - 1 != i && <hr />}
 
                                     </React.Fragment>
                                 })}
