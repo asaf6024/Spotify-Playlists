@@ -148,7 +148,7 @@ const App = () => {
         />
 
         <div className="container">
-          <h1 className='text-left'>Popular Music in {countryName}</h1>
+          <h1 className='text-left'>Popular songs in {countryName}</h1>
 
           <form onSubmit={buttonClicked}>
 
