@@ -6,18 +6,19 @@ const Listbox = props => {
     const clicked = e => {
         e.preventDefault();
         props.clicked(e.target.id);
+
+        if (window.innerWidth < 1000)
+            window.location.href = '#details';
     }
 
 
     return (
-        <div className="col-sm-6 px-0">
+        <div className="col-lg-6 col-md-12  px-0">
             <div className="list-group" style={props.items.length > 1 ? { overflow: 'scroll' } : {}}>
                 {
                     // props.items.length > 0 &&
-                    < div className='sortAndSearchDiv row'
-                        onScroll={() => alert('yes')}
-                    >
-                        <div className='col-sm-12 col-lg-4 sortDiv'
+                    < div className='sortAndSearchDiv row'>
+                        <div className='col-sm-4 sortDiv'
                             style={props.disabled == 'disabled' ? { cursor: 'not-allowed' } : { cursor: 'pointer' }}
                             onClick={() => {
                                 if (props.disabled != 'disabled')
@@ -34,7 +35,7 @@ const Listbox = props => {
                             </span>
                         </div>
 
-                        <input className='col-sm-12 col-lg-8 form-control'
+                        <input className='col-sm-8 form-control'
                             placeholder='Search...'
                             value={props.search}
                             onChange={(e) => props.setSearch(e.target.value)}

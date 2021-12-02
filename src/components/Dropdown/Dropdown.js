@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './dropdown.css'
 const Dropdown = props => {
 
     const dropdownChanged = e => {
@@ -14,7 +14,7 @@ const Dropdown = props => {
     }
 
     return (
-        <div className="col-sm-6 form-group row px-0">
+        <div className="col-lg-6 col-md-12 form-group row px-0 ">
             <label className="form-label col-sm-2">{props.label}</label>
 
             <select value={props.selectedValue}

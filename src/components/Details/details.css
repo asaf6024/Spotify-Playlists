@@ -61,4 +61,10 @@
   bottom: 0;
   cursor: pointer;
 }
+
+@media only screen and (max-width: 1000px) {
+  .detailsContainer {
+    margin: 15px 0 !important;
+  }
+}
 /*# sourceMappingURL=details.css.map */

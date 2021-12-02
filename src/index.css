@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 #root {
   background-repeat: no-repeat;
   background-size: cover;

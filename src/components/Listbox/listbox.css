@@ -33,6 +33,7 @@
   color: #495057;
   background: rgba(0, 0, 0, 0.1);
   font-weight: bold;
+  width: auto !important;
 }
 
 .list-group .sortDiv span {
@@ -52,5 +53,13 @@
   position: absolute;
   right: 20px;
   z-index: 3;
+}
+
+@media only screen and (max-width: 600px) {
+  .list-group .sortAndSearchDiv {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
 }
 /*# sourceMappingURL=listbox.css.map */

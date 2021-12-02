@@ -42,7 +42,7 @@ const NavPage = ({ country, changeCounrty }) => {
             <Navbar.Toggle aria-controls="navbar-dark-example" />
 
 
-            <Navbar.Collapse id="navbar-dark-example" className='col-sm-12 col-lg-5 text-right'>
+            <Navbar.Collapse id="navbar-dark-example" className='col-sm-12 col-lg-5 text-left'>
                 <Nav>
 
                     {/* <NavItem className='navItem'>

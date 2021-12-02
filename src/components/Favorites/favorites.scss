@@ -3,12 +3,19 @@
   width: 300px;
   right: 0;
   top: 60px;
+  z-index: 4;
+
+  h2 {
+    position: sticky;
+    top: 0;
+    background-color: #28a745;
+    border-color: #28a745;
+  }
   .favoritesContainer {
     background: rgba(0, 0, 0, 0.1);
     height: 80vh;
     border-left: 1px solid;
     // box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%) !important;
-    z-index: 2;
     overflow: auto;
     overflow-x: hidden;
   }
@@ -33,7 +40,7 @@
   .favoritesIcon {
     position: absolute;
     right: 10px;
-    top: 10px;
+    top: 5px;
     cursor: pointer;
     z-index: 2;
   }
@@ -54,7 +61,7 @@
   }
   .deleteAllIcon {
     position: absolute;
-    left: 0px;
+    left: 5px;
     top: 10px;
     cursor: pointer;
     z-index: 2;
@@ -94,13 +101,21 @@
     }
   }
 }
-
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1500px) {
   .favorites {
-    top: 40px;
-    z-index: 2 !important;
+    .favoritesContainer {
+      background: rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .favorites {
+    top: 0;
+    z-index: 4 !important;
     .favoritesContainer {
       background: rgba(0, 0, 0, 1);
+      height: 100vh;
     }
   }
 }

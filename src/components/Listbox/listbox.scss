@@ -29,6 +29,7 @@
     color: #495057;
     background: rgba(0, 0, 0, 0.1);
     font-weight: bold;
+    width: auto !important;
   }
   .sortDiv span {
     font-size: x-small;
@@ -45,5 +46,13 @@
     position: absolute;
     right: 20px;
     z-index: 3;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .list-group {
+    .sortAndSearchDiv {
+      width: max-content;
+    }
   }
 }

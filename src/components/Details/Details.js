@@ -40,8 +40,8 @@ const Details = ({ album, artists, name, external_urls, favorites, updateFavorit
     }
 
     return (
-        <div className="offset-md-1 col-sm-4 detailsContainer animated fadeIn" >
-            <div className="row col-sm-12 px-0">
+        <div id='details' className="offset-md-1 col-lg-4 col-md-12 detailsContainer animated fadeIn" >
+            <div className="row col-sm-12 px-0" style={{ margin: '0' }}>
                 <img
                     src={album.images[0].url}
                     alt={name}>

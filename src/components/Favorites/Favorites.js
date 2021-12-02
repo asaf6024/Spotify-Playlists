@@ -111,11 +111,11 @@ function Favorites({ favorites, updateFavorites, setFavorites }) {
 
                                     </React.Fragment>
                                 })}
-                            <i className="col-sm-2 text-white far fa-trash-alt fa-1x deleteAllIcon animated fadeIn"
+                            <i className="text-white far fa-trash-alt fa-1x deleteAllIcon animated fadeIn"
                                 title='Delete all Songs'
                                 onClick={() => deleteAllFavorites()}
                             ></i>
-                            <i className="col-sm-2 text-white fas fa-save saveAllIcon animated fadeIn"
+                            <i className="text-white fas fa-save saveAllIcon animated fadeIn"
                                 title='Save Favorites'
                                 onClick={() => saveAllFavorites()}
                             ></i>
@@ -126,7 +126,7 @@ function Favorites({ favorites, updateFavorites, setFavorites }) {
                         </>
                 }
             </div>
-        </div>
+        </div >
     )
 }
 
