@@ -16,8 +16,8 @@ Fork the project and clone it locally.<br />
 Create a file at the root of the project called `.env` with the following contents:
 
 ```sh
-REACT_APP_CLIENT_ID = 'The API key you obtained from spotify Web API'
-REACT_APP_CLIENT_SECRET = 'The Secret ID  you obtained from spotify Web API'
+REACT_APP_CLIENT_ID = 'The Client ID you obtained from spotify Web API'
+REACT_APP_CLIENT_SECRET = 'The Client Secret ID you obtained from spotify Web API'
 ```
 In the project directory, you can run:
 
