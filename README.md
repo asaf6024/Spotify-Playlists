@@ -1,10 +1,9 @@
 # Spotify Playlists Globally
 ##  [Live Demo](https://spotify-platylists-asaf.netlify.app/)
 
-A simple React app that returns popular playlists of Spotify by API from spotify Web API source:
+A simple React app that returns popular playlists of Spotify from spotify Web API sources:
 
-- **AccuWeather API**: location autocomplete, get current weather, 5-day daily forecast
-- **Geolocation API**
+- **spotify API**: Genres, Playlists, Song details
 
 ![Spotify Playlists Globally](https://my-portfolio-asaf.netlify.app/img/websites/spotify.JPG)
 
