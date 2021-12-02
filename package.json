@@ -10,12 +10,8 @@
     "axios": "^0.24.0",
     "bootstrap": "^4.5.2",
     "dotenv": "^10.0.0",
-<<<<<<< HEAD
     "mdbreact": "^4.6.1",
     "npm": "^8.1.4",
-=======
-    "mdbreact": "^5.2.0",
->>>>>>> parent of 49ea637 (react-dev-utils upgrade)
     "react": "^16.13.1",
     "react-bootstrap": "^2.0.2",
     "react-dom": "^16.13.1",
