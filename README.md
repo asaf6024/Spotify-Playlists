@@ -3,7 +3,7 @@
 
 A simple React app that returns popular playlists of Spotify from spotify Web API sources:
 
-- **spotify API**: Genres, Playlists, Song details
+- **Spotify API**: Genres, Playlists, Song details
 
 ![Spotify Playlists Globally](https://my-portfolio-asaf.netlify.app/img/websites/spotify.JPG)
 
