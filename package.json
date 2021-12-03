@@ -11,6 +11,7 @@
     "bootstrap": "^4.5.2",
     "dotenv": "^10.0.0",
     "mdbreact": "^4.6.1",
+    "node-sass": "^4.14.1",
     "npm": "^8.1.4",
     "react": "^16.13.1",
     "react-bootstrap": "^2.0.2",
@@ -38,5 +39,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "webpack": "^4.44.0"
   }
 }

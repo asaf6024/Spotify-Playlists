@@ -5,7 +5,7 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50%;
-  background: url("/images/spotify.jpg") 50% / cover no-repeat fixed;
+  background: url("./spotify.jpg") 50% / cover no-repeat fixed;
   min-height: 100vh;
 }
 .container-fluid {
