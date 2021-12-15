@@ -55,7 +55,8 @@
   font-weight: bold;
 }
 
-.detailsContainer i {
+.detailsContainer i.far.fa-heart.text-white.fa-2x,
+.detailsContainer i.fas.fa-heart.text-white.fa-2x {
   position: absolute;
   right: 10px;
   bottom: 0;

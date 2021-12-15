@@ -17,7 +17,7 @@ const Listbox = props => {
             <div className="list-group" style={props.items.length > 1 ? { overflow: 'scroll' } : {}}>
                 {
                     // props.items.length > 0 &&
-                    < div className='sortAndSearchDiv row'>
+                    <div className='sortAndSearchDiv row'>
                         <div className='col-sm-4 sortDiv'
                             style={props.disabled == 'disabled' ? { cursor: 'not-allowed' } : { cursor: 'pointer' }}
                             onClick={() => {

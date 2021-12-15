@@ -14,9 +14,9 @@
   position: -webkit-sticky;
   position: sticky;
   top: -5px;
-  background: inherit;
+  /* background: inherit; */
   z-index: 2;
-  background: rgba(0, 0, 0, 0.3);
+  background: black;
   width: 100%;
 }
 
