@@ -16,7 +16,7 @@
   top: -5px;
   background: inherit;
   z-index: 2;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.6);
   width: 100%;
 }
 
@@ -31,7 +31,7 @@
   border: 2px solid white;
   border-radius: 5px;
   color: #495057;
-  background: rgba(0, 0, 0, 0.1);
+  /* background: rgba(0, 0, 0, 0.1); */
   font-weight: bold;
   width: auto !important;
 }
