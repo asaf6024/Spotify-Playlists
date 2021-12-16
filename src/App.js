@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Dropdown from './components/Dropdown/Dropdown';
 import Listbox from './components/Listbox/Listbox';
 import Detail from './components/Details/Details';
-import Nav from './components/Nav/Nav';
+import NavPage from './components/Nav/NavPage';
 import Footer from './components/Footer/Footer';
 
 import axios from 'axios';
@@ -12,7 +12,6 @@ import './App.css'
 import Favorites from './components/Favorites/Favorites';
 
 const App = () => {
-
 
   // console.log('RENDERING APP.JS');
 
@@ -136,7 +135,7 @@ const App = () => {
 
   return (
     <>
-      <Nav
+      <NavPage
         country={country}
         changeCounrty={changeCounrty}
       />

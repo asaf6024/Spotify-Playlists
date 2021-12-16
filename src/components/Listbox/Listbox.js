@@ -1,7 +1,7 @@
 import React from 'react';
 import './listbox.css'
 
-const Listbox = props => {
+const Listbox = (props) => {
 
     const clicked = e => {
         e.preventDefault();
