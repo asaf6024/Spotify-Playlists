@@ -4,7 +4,7 @@
 A simple React app that returns popular playlists of Spotify from spotify Web API sources:
 
 - **Spotify API**: Genres, Playlists, Song details
-- 
+
 ![sptify](https://user-images.githubusercontent.com/33829557/144406073-f9636014-1e43-4f02-8851-ad3cc821791d.gif)
 
 ## Getting started
